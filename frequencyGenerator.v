@@ -1,0 +1,28 @@
+// frequencyGenerator is used to generate a voltage 
+// on a precalculated 'normalised' sine wave stored in our Sine ROM.
+// The rate (stepsize) which we cycle through our sineROM determines the 
+// frequency we hear.
+// Our fixed point SineROM address and 'stepsize' is used to 
+// cycle through the rom at different rates - depending on the desired frequency.
+// The stepsize input has already been calculated 
+// as ((AUDIO_FREQUENCY * FPMULT * SINEROMSIZE )/BOARD_CLOCKSPEED)
+// 'SINEROMSIZE' is actually the number of steps it takes to go through a complete sine wave cycle.
+
+module  frequencyGenerator #(parameter FPMULT = 65536, SINEROMSIZE = 256) (clk, stepsize, gain, romdata);
+  input  clk;
+  input [15:0] stepsize ;
+  input [3:0] gain ;
+  output [15:0] romdata;
+	
+	reg [$clog2(FPMULT) + $clog2(SINEROMSIZE) - 1:0] fpaddress = 0;
+	
+	always @(posedge clk) begin
+		fpaddress <= fpaddress + stepsize  ;
+	end
+
+	wire [15:0] sromvalue ;
+	assign romdata = gain[3] == 0 ? sromvalue<<gain : sromvalue>>(gain ^ 4'd15);
+	//	sineROM #(SINEROMSIZE) rom(.clk(clk),.address(fpaddress/FPMULT),.svalue(romdata)) ;
+ 	sineROM #(SINEROMSIZE) rom(.clk(clk),.address(fpaddress[23:16]),.svalue(sromvalue)) ;
+	
+endmodule

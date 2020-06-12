@@ -1,0 +1,9 @@
+module hexseg #() 
+(
+ input [1:0] digit,
+ input [4:0] value,
+ output  [4:0] gain  
+);
+
+
+endmodule

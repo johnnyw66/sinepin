@@ -1,0 +1,132 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 15:06:15  February 23, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		sinepin_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C5T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY sinepin
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:06:15  FEBRUARY 23, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE sinepin.v
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_40 -to speaker
+set_location_assignment PIN_3 -to led
+set_global_assignment -name VERILOG_FILE blink.v
+set_global_assignment -name VERILOG_FILE pwm.v
+set_global_assignment -name VERILOG_FILE midiSelection.v
+set_global_assignment -name VERILOG_FILE sineROM.v
+set_global_assignment -name VERILOG_FILE frequencyGenerator.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE musicROM.v
+set_location_assignment PIN_144 -to btn
+set_global_assignment -name VERILOG_FILE mixer.v
+set_location_assignment PIN_47 -to u8bit_sineromvalue[7]
+set_location_assignment PIN_51 -to u8bit_sineromvalue[6]
+set_location_assignment PIN_57 -to u8bit_sineromvalue[4]
+set_location_assignment PIN_53 -to u8bit_sineromvalue[5]
+set_location_assignment PIN_63 -to u8bit_sineromvalue[3]
+set_location_assignment PIN_69 -to u8bit_sineromvalue[1]
+set_location_assignment PIN_65 -to u8bit_sineromvalue[2]
+set_location_assignment PIN_71 -to u8bit_sineromvalue[0]
+set_global_assignment -name VERILOG_FILE logsineROM.v
+set_global_assignment -name VERILOG_FILE powerROM.v
+set_global_assignment -name VERILOG_FILE frequencyGeneratorLog.v
+set_global_assignment -name VERILOG_FILE sineQuartROM.v
+set_global_assignment -name VERILOG_FILE frequencyGeneratorQuart.v
+set_location_assignment PIN_41 -to radio
+set_global_assignment -name VERILOG_FILE envelope.v
+set_location_assignment PIN_7 -to led2
+set_location_assignment PIN_9 -to led3
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/johnny/fpga projects/sinepin/Waveform.vwf"
+set_global_assignment -name VERILOG_FILE hexseg.v
+set_location_assignment PIN_119 -to _7seg[0]
+set_location_assignment PIN_121 -to _7seg[1]
+set_location_assignment PIN_125 -to _7seg[2]
+set_location_assignment PIN_129 -to _7seg[3]
+set_location_assignment PIN_133 -to _7seg[4]
+set_location_assignment PIN_137 -to _7seg[5]
+set_location_assignment PIN_141 -to _7seg[6]
+set_location_assignment PIN_122 -to digitsel[0]
+set_location_assignment PIN_115 -to digitsel[1]
+set_location_assignment PIN_134 -to digitsel[3]
+set_location_assignment PIN_143 -to digitsel[2]
+set_global_assignment -name VERILOG_FILE hexdisplay.v
+set_global_assignment -name VERILOG_FILE shexseg.v
+set_location_assignment PIN_73 -to LCDdata[7]
+set_location_assignment PIN_75 -to LCDdata[6]
+set_location_assignment PIN_79 -to LCDdata[5]
+set_location_assignment PIN_86 -to LCDdata[4]
+set_location_assignment PIN_87 -to LCDdata[3]
+set_location_assignment PIN_93 -to LCDdata[2]
+set_location_assignment PIN_96 -to LCDdata[1]
+set_location_assignment PIN_99 -to LCDdata[0]
+set_location_assignment PIN_101 -to LCDen
+set_location_assignment PIN_103 -to LCDrs
+set_location_assignment PIN_72 -to single8seg[0]
+set_location_assignment PIN_52 -to single8seg[7]
+set_location_assignment PIN_55 -to single8seg[6]
+set_location_assignment PIN_58 -to single8seg[5]
+set_location_assignment PIN_60 -to single8seg[4]
+set_location_assignment PIN_64 -to single8seg[3]
+set_location_assignment PIN_67 -to single8seg[2]
+set_location_assignment PIN_70 -to single8seg[1]
+set_global_assignment -name VERILOG_FILE lcdstring.v
+set_global_assignment -name VERILOG_FILE casecompare.v
+set_global_assignment -name QIP_FILE mypll.qip
+set_location_assignment PIN_17 -to _50clk
+set_global_assignment -name VERILOG_FILE noiseGeneratorQuart.v
+set_global_assignment -name VERILOG_FILE PWMdac.v
+set_location_assignment PIN_42 -to btn2
+set_global_assignment -name VERILOG_FILE lcdtest.v
+set_global_assignment -name VERILOG_FILE musicMarioROM.v
+set_global_assignment -name VERILOG_FILE musicMarioROM2.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

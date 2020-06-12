@@ -1,0 +1,16 @@
+module musicMarioROM  (
+	input clk,
+	input [8:0] address,
+	output reg [7:0] note
+);
+
+always @(posedge clk)
+case(address[8:0])
+
+
+
+
+	default: note <= 8'd0;
+endcase
+
+endmodule

@@ -1,0 +1,32 @@
+
+State Machine - |sinepin|lcdandsegtest:lcddispl|lcd1602String:lcdDisplay|next
+Name next.STATE_RESET next.STATE_RESETCUR next.STATE_NEXTLINE next.STATE_FINISH next.STATE_SENDSTR next.STATE_INIT3 next.STATE_INIT2 next.STATE_INIT1 next.STATE_INIT0 
+next.STATE_INIT0 0 0 0 0 0 0 0 0 0 
+next.STATE_INIT1 0 0 0 0 0 0 0 1 1 
+next.STATE_INIT2 0 0 0 0 0 0 1 0 1 
+next.STATE_INIT3 0 0 0 0 0 1 0 0 1 
+next.STATE_SENDSTR 0 0 0 0 1 0 0 0 1 
+next.STATE_FINISH 0 0 0 1 0 0 0 0 1 
+next.STATE_NEXTLINE 0 0 1 0 0 0 0 0 1 
+next.STATE_RESETCUR 0 1 0 0 0 0 0 0 1 
+next.STATE_RESET 1 0 0 0 0 0 0 0 1 
+
+State Machine - |sinepin|lcdandsegtest:lcddispl|lcd1602String:lcdDisplay|current
+Name current.STATE_RESET current.STATE_RESETCUR current.STATE_NEXTLINE current.STATE_FINISH current.STATE_SENDSTR current.STATE_INIT3 current.STATE_INIT2 current.STATE_INIT1 current.STATE_INIT0 
+current.STATE_INIT0 0 0 0 0 0 0 0 0 0 
+current.STATE_INIT1 0 0 0 0 0 0 0 1 1 
+current.STATE_INIT2 0 0 0 0 0 0 1 0 1 
+current.STATE_INIT3 0 0 0 0 0 1 0 0 1 
+current.STATE_SENDSTR 0 0 0 0 1 0 0 0 1 
+current.STATE_FINISH 0 0 0 1 0 0 0 0 1 
+current.STATE_NEXTLINE 0 0 1 0 0 0 0 0 1 
+current.STATE_RESETCUR 0 1 0 0 0 0 0 0 1 
+current.STATE_RESET 1 0 0 0 0 0 0 0 1 
+
+State Machine - |sinepin|envelope:env|state
+Name state.STATE_SUSTAIN state.STATE_DECAY state.STATE_ATTACK state.STATE_IDLE state.STATE_RELEASE 
+state.STATE_IDLE 0 0 0 0 0 
+state.STATE_ATTACK 0 0 1 1 0 
+state.STATE_DECAY 0 1 0 1 0 
+state.STATE_SUSTAIN 1 0 0 1 0 
+state.STATE_RELEASE 0 0 0 1 1 

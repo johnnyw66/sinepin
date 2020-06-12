@@ -1,0 +1,10 @@
+module hexdisplay
+(
+ input clk ;
+ input [15:0] value,
+ input en,
+ output reg [6:0] segment  
+);
+
+
+endmodule

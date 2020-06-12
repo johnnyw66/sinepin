@@ -1,0 +1,7 @@
+module PWMdac(input clk, input RxD, output PWM_out);
+
+reg [8:0] PWM_accumulator;
+always @(posedge clk) PWM_accumulator <= PWM_accumulator[7:0] + RxD;
+
+assign PWM_out = PWM_accumulator[8];
+endmodule

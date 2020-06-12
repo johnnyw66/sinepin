@@ -1,0 +1,14 @@
+module blink(clk,led) ;
+input clk ;
+output led ;
+
+reg rled ;
+
+always @(clk)
+begin
+	rled <= ~rled ;
+end
+
+assign led = rled ;
+
+endmodule

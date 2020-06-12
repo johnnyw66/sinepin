@@ -1,0 +1,17 @@
+module powerROM #(parameter SINEROMSIZE = 256)(
+	input clk,
+	input [$clog2(SINEROMSIZE) - 1:0] address,
+	output  reg [15:0] power
+);
+
+
+always @(posedge clk)
+begin
+	case(address)
+	
+	
+	endcase
+end
+
+
+endmodule

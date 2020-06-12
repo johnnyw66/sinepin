@@ -1,0 +1,22 @@
+module root
+#(BOARD_CLOCKSPEED=50000000, FPMULT=65536, SINEROMSIZE=256)
+(
+	input clk,
+	output reg speaker,
+	output reg[7:0] romvalue
+);
+
+parameter 	DEMO_NOTE1 = 440, 
+				DEMO_NOTE2 = 880, 
+				DEMO_NOTE3 = 110, 
+				DEMO_NOTE4 = 220, 
+				DEMO_NOTE5 = 700,
+				DEMO_NOTE6 = 2000,
+				DEMO_NOTE7 = 4000,
+				DEMO_NOTE8 = 6000,
+				DEMO_NOTE9 = 7902,
+				DEMO_NOTE10 = 12544 ;
+	
+`define _CALCSTEP(FREQ) ((0.0 + ((FREQ * FPMULT * SINEROMSIZE )/BOARD_CLOCKSPEED)))
+
+endmodule

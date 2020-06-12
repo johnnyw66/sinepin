@@ -1,0 +1,14 @@
+module  frequencyGenerator #(parameter FPMULT = 65536) (clk, stepsize, romdata);
+  input  clk;
+  input [15:0] stepsize ;
+  output [15:0] romdata;
+	
+	reg [31:0] fpaddress = 0;
+  
+	always @(posedge clk) begin
+		fpaddress <= fpaddress + stepsize ;
+	end
+
+	sineROM rom(.clk(clk),.address(fpaddress/FPMULT),.svalue(romdata)) ;
+ 
+endmodule

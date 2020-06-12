@@ -1,0 +1,30 @@
+module case_compare
+
+reg sel ;
+
+initial begin
+#1 $display ("\n Driving 0") ;
+sel = 0 ;
+
+#1 $display ("\n Driving 0") ;
+sel = 1 ;
+
+#1 $display ("\n Driving X") ;
+sel = 1'bx ;
+
+#1 $display ("\n Driving Z") ;
+sel = 1'bz ;
+#1 $finish ;
+
+end
+
+
+always @(sel)
+case (sel)
+	1'b0: $display("Normal: Logic 0 on sel") ;
+	1'b1: $display("Normal: Logic 1 on sel") ;
+	1'bx: $display("Normal: Logic x on sel") ;
+	1'bz: $display("Normal: Logic z on sel") ;
+endcase 
+
+

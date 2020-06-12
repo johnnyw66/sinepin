@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sinepin">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sinepin|frequencyGeneratorQuart:modfreqGen|sineQuartROM:rom|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_ud71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sinepin|midiSelection:generateStepSizeForNote4|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_ji71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sinepin|frequencyGeneratorQuart:freqGen3|sineQuartROM:rom|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_ud71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sinepin|midiSelection:generateStepSizeForNote3|altsyncram:Ram0_rtl_0" CBX_FILE_NAME="altsyncram_ji71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sinepin|musicMarioROM:get_fullnotechn1|altsyncram:WideOr0_rtl_0" CBX_FILE_NAME="altsyncram_2hv.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
